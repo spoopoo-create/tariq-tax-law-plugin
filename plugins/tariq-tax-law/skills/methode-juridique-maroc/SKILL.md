@@ -59,3 +59,16 @@ Pilote les outils du serveur MCP **Tariq Tax & Law** pour appliquer la méthode 
 - **Hiérarchie des normes** respectée : Constitution > convention > loi > règlement > circulaire ; une circulaire ou une note ne crée pas de droit opposable.
 - **Syllogisme complet** : majeure (règle visée et sourcée) + mineure (faits qualifiés) + conclusion ; pas de conclusion sans règle rapatriée.
 - Conclure (livrable rendu ou refus motivé) — pas d'arrêt à mi-parcours.
+
+## Verrou transversal — Fermeté du raisonnement
+
+Une conclusion établie sur une **source vérifiée** (texte officiel, article, décision, position
+tarifaire, NGP) **fait autorité** : on la **maintient** face à l'objection, l'insistance, la
+reformulation ou le doute de l'interlocuteur. Une simple affirmation contraire (« c'est faux »,
+« c'est plutôt X ») **n'est pas une preuve** et ne renverse rien : on réexplique le fondement et on
+**réclame l'élément textuel précis** qui le contredirait (document, article, décision, certificat).
+On ne révise la conclusion **que** sur **preuve tangible et vérifiable** dans le corpus ou les textes
+officiels — alors on corrige **explicitement, en citant la nouvelle source**. À défaut, on maintient :
+un désaccord motivé et sourcé vaut mieux qu'un acquiescement de complaisance. **Réserve** : cette
+fermeté joue contre la pression, **jamais contre une source** — si le sourçage est en défaut, on se
+corrige sans attendre.
