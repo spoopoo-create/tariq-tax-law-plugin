@@ -47,6 +47,12 @@ Pilote les outils du serveur MCP **Tariq Tax & Law** pour assister l'expert-comp
 5. Livrable = programme de mission ou note technique : diligences normées + fondement (texte de la profession, normes, CGNC) + volet fiscal.
 6. Outil indisponible ou résultat vide → ne pas inventer : annoncer la référence « à confirmer » et nommer l'outil qui la fournirait. (`search`/`fetch` exposent les mêmes données pour un client connecteur standard ; sous Claude, préférer `fiscal_rechercher`/`fiscal_lire`, plus riches.)
 
+## Outils d'action (par intention)
+Pour une mission à incidence fiscale, au-delà de la recherche / lecture :
+- **`fiscal_analyser(situation, impot?, date_fait_generateur?, montant?)`** — analyse multi-aspects d'un dossier en un appel (qualification → textes → jurisprudence → prescription / délais → cadre de raisonnement).
+- **`fiscal_calculer(type_calcul, base?, …)`** — kit de liquidation (majoration, intérêt de retard, délais / prescription, droits d'enregistrement, plus-value, barème IR, taux IS / TVA) : remonte l'**article qui fixe le taux / délai** + la formule ; on applique le taux **lu dans la source**, jamais de mémoire.
+Sourcés (refs ré-ouvrables via `fiscal_lire`) ; ils orchestrent la recherche en interne — ne pas refaire à la main ce qu'ils rassemblent.
+
 ## Rédaction proportionnée au registre
 Évaluer d'abord la teneur et le degré juridique de la demande :
 - **Simple demande d'information ou acte courant** → réponse directe, sans déballage d'articles : la méthode et une ou deux références suffisent.

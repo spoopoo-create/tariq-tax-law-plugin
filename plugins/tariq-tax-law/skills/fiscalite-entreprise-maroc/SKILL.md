@@ -36,6 +36,13 @@ Pilote les outils du serveur MCP **Tariq Tax & Law** pour traiter une question d
 5. Livrable = consultation fiscale, calcul d'impôt ou note d'optimisation : le rédiger à partir de la méthode (1) et des articles du CGI + notes circulaires rapatriés (2-3).
 6. Outil indisponible ou résultat vide → ne pas inventer : annoncer la référence « à confirmer » et nommer l'outil qui la fournirait. (`search`/`fetch` exposent les mêmes données pour un client connecteur standard ; sous Claude, préférer `fiscal_rechercher`/`fiscal_lire`, plus riches.)
 
+## Outils d'action (par intention)
+Pour un dossier de fiscalité d'entreprise, au-delà de la recherche / lecture :
+- **`fiscal_analyser(situation, impot?, date_fait_generateur?, montant?)`** — analyse multi-aspects d'un dossier en un appel (qualification → textes → jurisprudence → prescription / délais → cadre de raisonnement).
+- **`fiscal_calculer(type_calcul, base?, …)`** — kit de liquidation (majoration, intérêt de retard, délais / prescription, droits d'enregistrement, plus-value, barème IR, taux IS / TVA) : remonte l'**article qui fixe le taux / délai** + la formule ; on applique le taux **lu dans la source**, jamais de mémoire.
+- **`fiscal_rediger(type_piece, contexte?, fondement?, …)`** — trousse de rédaction d'une pièce (plan + textes de procédure + matière de fond), calibrée par registre.
+Sourcés (refs ré-ouvrables via `fiscal_lire`) ; ils orchestrent la recherche en interne — ne pas refaire à la main ce qu'ils rassemblent.
+
 ## Rédaction proportionnée au registre
 Évaluer d'abord la teneur et le degré juridique de la demande :
 - **Simple demande d'information ou acte courant** → réponse directe, sans déballage d'articles : la méthode et une ou deux références suffisent.
