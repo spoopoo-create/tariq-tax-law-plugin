@@ -12,9 +12,11 @@ description: >-
   et les MODES de preuve par matière, les VOIES DE RECOURS et leurs DÉLAIS (réclamation préalable,
   commissions, juridictions administratives, cassation), la discipline ANTI-HALLUCINATION (citer la
   source exacte ou dire qu'on ne sait pas — jamais d'article, de taux, de délai, de seuil ou de n° de
-  décision inventé), l'usage canonique des 4 outils-intention du connecteur (fiscal_rechercher pour
-  localiser → fiscal_lire pour lire le texte exact → fiscal_explorer pour naviguer/graphe de citations
-  → fiscal_expertise pour la méthode-métier), les standards de citation et de livrable professionnel,
+  décision inventé), l'usage canonique des 7 outils-intention du connecteur — 4 de recherche
+  (fiscal_rechercher pour localiser → fiscal_lire pour lire le texte exact → fiscal_explorer pour
+  naviguer/graphe de citations → fiscal_expertise pour la méthode-métier) et 3 d'action (fiscal_analyser
+  pour l'analyse multi-aspects d'un dossier, fiscal_calculer pour liquider un montant/délai sur texte
+  sourcé, fiscal_rediger pour produire une pièce), les standards de citation et de livrable professionnel,
   et le ROUTAGE vers les skills de domaine.
   Use when : démarrage d'un dossier complexe ou pluridisciplinaire ; besoin de cadrer la MÉTHODE, le
   plan d'analyse ou la stratégie avant de plonger dans un domaine ; question de HIÉRARCHIE des normes
@@ -39,6 +41,13 @@ Pilote les outils du serveur MCP **Tariq Tax & Law** pour appliquer la méthode 
 4. **Naviguer / suivre les citations** → `fiscal_explorer(action, cible, filtre)` : inventaire et navigation, et surtout `citations_de` / `citations_vers` / `resoudre` pour relier un arrêt ou une décision aux articles qu'il vise (et l'inverse). N'appeler que si la navigation ou le graphe sert vraiment la réponse.
 5. C'est la skill **socle** : elle cadre toutes les autres. Méthode chargée (1) et textes réunis (2-3), produire le raisonnement (qualification → règle sourcée → application → conclusion) ou router vers le domaine expert via `fiscal_expertise("<domaine>")`.
 6. Outil indisponible ou résultat vide → ne pas inventer : annoncer la référence « à confirmer » et nommer l'outil qui la fournirait. (`search`/`fetch` exposent les mêmes données pour un client connecteur standard ; sous Claude, préférer `fiscal_rechercher`/`fiscal_lire`, plus riches.)
+
+## Outils d'action (par intention)
+Au-delà de la recherche, trois outils produisent le livrable en un appel — chacun reste sourcé, jamais « de mémoire » :
+- **`fiscal_analyser(situation, impot?, date_fait_generateur?, montant?)`** — analyse multi-aspects d'un dossier : qualification, textes (CGI + notes circulaires), jurisprudence (CNRF + Cassation), prescription/délais, cadre de raisonnement. Le réflexe « donne-moi ton analyse du dossier ».
+- **`fiscal_calculer(type_calcul, base?, …)`** — kit de liquidation (majoration, intérêt de retard, délais/prescription, barème IR, taux IS/TVA, droits d'enregistrement, plus-value) : il remonte l'**article qui fixe le taux/délai** + la formule. On applique le taux **lu dans la source citée** ; texte du taux absent → on ne calcule pas, on le réclame.
+- **`fiscal_rediger(type_piece, contexte?, fondement?, …)`** — trousse de rédaction d'une pièce (réclamation, recours, requête, remise gracieuse, observations, consultation) : plan + textes de procédure (délai/forme/voie) + matière de fond, calibrés par registre.
+Ces trois orchestrent la recherche en interne — ne pas refaire à la main ce qu'ils rassemblent.
 
 ## Rédaction proportionnée au registre
 Évaluer d'abord la teneur et le degré juridique de la demande :

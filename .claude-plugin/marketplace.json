@@ -7,7 +7,7 @@
       "name": "tariq-tax-law",
       "source": "./plugins/tariq-tax-law",
       "description": "Expertise fiscale et juridique Maroc (CGI, CGNC, jurisprudence Cassation/administrative) : 15 skills méthodologiques natifs + connecteur MCP Tariq Tax & Law (corpus gated).",
-      "version": "0.2.0"
+      "version": "0.3.0"
     }
   ]
 }
