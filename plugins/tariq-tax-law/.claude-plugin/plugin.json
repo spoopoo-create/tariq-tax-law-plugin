@@ -1,6 +1,6 @@
 {
   "name": "tariq-tax-law",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Tariq Tax & Law — expertise fiscale et juridique Maroc. 15 skills méthodologiques natifs : méthode juridique (socle), fiscalité d'entreprise, contentieux fiscal, comptabilité (CGNC), avocat, notariat, droit administratif, civil, commercial, pénal, travail, foncier, expert-comptable, huissier, professions juridiques. La profondeur (CGI article par article, notes circulaires, décisions CNRF, jurisprudence Cassation/administrative, doctrine, conventions) vient du serveur MCP Tariq Tax & Law (accès gated).",
   "author": { "name": "Tariq Tax & Law" },
   "keywords": ["fiscalite", "droit", "maroc", "cgi", "tax", "law", "jurisprudence", "contentieux"],
